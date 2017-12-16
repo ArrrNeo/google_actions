@@ -1,0 +1,28 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "fulfillment": { "conversationName": "get-room-temp" },
+      "intent":
+      {
+        "name": "actions.intent.MAIN",
+        "trigger": { "queryPatterns": [ "what is room temperature", "how much is room temperature" ] }
+      }
+    },
+    {
+	    "description": "Everything Else Intent",
+	    "name": "allElse",
+	    "fulfillment": { "conversationName": "get-room-temp" },
+	    "intent": { "name": "actions.intent.TEXT" }
+    }
+  ],
+  "conversations":
+  {
+    "get-room-temp":
+    {
+      "name": "get-room-temp",
+      "url": "https://sample-action-project-69cdf.appspot.com"
+    }
+  }
+}
